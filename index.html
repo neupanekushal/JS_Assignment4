@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Document</title>
+    <body>
+      <style>
+        .div1 {
+          margin-left: 30rem;
+          margin-top: 20px;
+          color: red;
+        }
+        .button {
+          margin-left: 35rem;
+          color: red;
+        }
+      </style>
+      <div>
+        <img src="train1.png" class="image" alt="train image" />
+      </div>
+
+      <div class="div1">Click to move the train to the right!!!</div>
+      <button class="button">Click on me</button>
+
+      <script>
+        let trn = document.querySelector(".image");
+
+        const butn = document.querySelector(".button");
+        butn.addEventListener("click", moveTruck);
+
+        let num = 0;
+
+        function moveTruck() {
+          num += 10;
+
+          trn.style.marginLeft = `${num}px`;
+        }
+      </script>
+    </body>
+  </head>
+</html>
